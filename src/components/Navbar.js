@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "../img/sharp-logo.jpg";
 
 function Navbar() {
   return (
-    <nav className="p-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <nav className="absolute z-50 w-full p-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="#" className="flex items-center">
-          <img src={logo} className="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
+        <a href="/" className="flex items-center">
+          <img src="https://firebasestorage.googleapis.com/v0/b/rs-erectors.appspot.com/o/RS%20Logo%20(250%20%C3%97%20125%20px).png?alt=media&token=9df9f734-eab9-4eca-9636-210c7a54a048" className="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
           {/* Medical-Legal Discovery Specialists */}
           {/* <span className="self-center text-xl font-semibold whitespace-nowrap text-orange-500"></span> */}
         </a>

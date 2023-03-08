@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Navbar, Footer } from './components';
-import { Home, Services }  from './pages';
+import { Home, About }  from './pages';
 
 function App() {
   return (
-    <div className='bg-orange-300 w-full h-screen'>
+    <div className='bg-blue-200 w-full h-screen'>
         <Navbar />
         <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/gallery" element={<Services/>}/>
+            <Route path="/gallery" element={<About/>}/>
         </Routes>
         <Footer />
     </div>

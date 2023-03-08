@@ -1,12 +1,11 @@
 import React from "react";
-import map from '../img/map.jpg';
 
 function Contact() {
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-20 lg:py-[120px] px-4">
+    <section className="relative z-10 overflow-hidden bg-orange-400 py-20 lg:py-[120px] px-4">
       <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap lg:justify-between">
-          <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
+        <div className="-mx-4 flex flex-wrap lg:justify-between gap-3">
+          <div className="w-full px-4 lg:w-1/2 xl:w-6/12 bg-white">
             <div className="mb-12 max-w-[570px] lg:mb-0">
               <span className="text-orange-400 mb-4 block text-base font-semibold text-center">
                 Contact Us
@@ -73,9 +72,6 @@ function Contact() {
                   <p className="text-body-color text-base">info@yourdomain.com</p>
                 </div>
               </div>
-            </div>
-            <div className="absolute">
-                <img src={map}></img>
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">

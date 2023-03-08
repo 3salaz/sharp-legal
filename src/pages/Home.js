@@ -1,64 +1,95 @@
-import React from "react";
-import { Alert, Contact, Welcome } from "../components";
-import img1 from '../img/legal-imaging.jpg';
+import React, { useCallback } from "react";
 
 function Home() {
   return (
-    <div>
-      <Alert />
-      <Welcome />
-      <section className="container m-auto">
-        <div class="max-w-sm bg-white border border-white rounded-lg shadow-md dark:bg-white dark:border-white">
-          <a href="#">
-            <img
-              class="rounded-t-lg w-full"
-              src={img1}
-              alt=""
-            />
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
-              </h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-            <a
-              href="#"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    <div className="w-[100vw] h-[100vh] bg-white flex overflow-y-scroll smooth-scroll flex-col">
+      <section className="relative min-h-[100vh] bg-orange-600" id="home">
+        <section className="flex h-full justify-center items-center">
+          <div className="w-full h-full bg-white flex overflow-x-scroll snap-mandatory snap-x">
+            <div
+              id="homePage"
+              className="min-w-full bg-blue-300 flex justify-center items-center text-5xl  snap-center"
             >
-              Read more
-              <svg
-                aria-hidden="true"
-                class="w-4 h-4 ml-2 -mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
+              Home
+            </div>
+            <div
+              id="servicesPage"
+              className="bg-orange-400 min-w-full flex justify-center items-center text-5xl snap-x snap-center"
+            >
+              Services
+            </div>
+            <div
+              id="galleryPage"
+              className="min-w-full bg-green-300 flex justify-center items-center text-5xl snap-x snap-center"
+            >
+                {/*
+  .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+} 
+*/}
+              <div className="flex flex-wrap px-1">
+                <div className="flex-[25%] max-w-[25%] md:flex-[50%] md:max-w-[50%] lg:flex-[100%] lg:max-w-[100%] px-1">
+                  <div className="bg-white w-300 h-240">
+                    <img className="mt-2 align-middle w-full object-cover h-full" src="https://via.placeholder.com/200x500"></img>
+                  </div>
+                  <img className="mt-2 align-middle w-full" src="https://via.placeholder.com/200x500"></img>
+                  <img className="mt-2 align-middle w-full" src="https://via.placeholder.com/200x500"></img>
+                  <img className="mt-2 align-middle w-full" src="https://via.placeholder.com/200x500"></img>
+                  <img className="mt-2 align-middle w-full" src="https://via.placeholder.com/200x500"></img>
+                  <img className="mt-2 align-middle w-full" src="https://via.placeholder.com/200x500"></img>
+                  <img className="mt-2 align-middle w-full" src="https://via.placeholder.com/200x500"></img>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+        <div id="home" className="absolute bottom-1 border-black w-full">
+          <ul className="tabs flex items-center justify-center bg-white p-4 gap-8 drop-shadow-2xl ">
+            <li className="tab">
+              <a href="#homePage">Home</a>
+            </li>
+            <li className="tab">
+              <a href="#servicesPage">Services</a>
+            </li>
+            <li className="tab">
+              <a href="#galleryPage">Gallery</a>
+            </li>
+          </ul>
+          <a href="#contact">GO TO CONTACT SECTION</a>
         </div>
-        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-    </a>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Read more
-        <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </a>
-</div>
       </section>
-      <Contact />
+
+      <section
+        className="min-h-[100vh] flex justify-center items-center  bg-red-400"
+        id="contact"
+      >
+        <div className="flex justify-center flex-col items-center box border border-black">
+          <img src="https://via.placeholder.com/200x200"></img>
+          <a href="#home">GO TO HOME PAGE</a>
+        </div>
+      </section>
     </div>
   );
 }

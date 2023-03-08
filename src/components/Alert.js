@@ -2,7 +2,7 @@ import React from "react";
 
 function Alert() {
   return (
-    <div className="flex mx-2 mt-2 rounded-lg border-l-[6px] border-transparent bg-white px-7 py-4 shadow-md md:p-9">
+    <div className="absolute flex mx-2 mt-2 rounded-lg border-l-[6px] border-transparent bg-white px-7 py-4 shadow-md md:p-9">
       <div className="mr-5 flex h-9 w-full max-w-[36px] items-center justify-center rounded-lg bg-warning bg-opacity-30">
         <svg
           width="19"
